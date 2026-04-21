@@ -4,6 +4,8 @@ This folder contains the **Ultimate Edition** of the Market Research Pro applica
 
 ## 🚀 Getting Started
 
+👉 For detailed documentation, see [README_ULTIMATE.md](README_ULTIMATE.md)
+
 1. **Install Dependencies**:
    ```bash
    pip install requests python-dotenv beautifulsoup4 matplotlib numpy Pillow textblob google-play-scraper pytrends reportlab serpapi deep-translator langdetect
