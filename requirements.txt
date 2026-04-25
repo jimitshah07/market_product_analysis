@@ -1,0 +1,4 @@
+matplotlib
+google-play-scraper
+google-search-results
+python-dotenv
