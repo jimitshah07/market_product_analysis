@@ -75,6 +75,12 @@ HOW TO RUN
 ----------
   python final_project.py
 
+FOR MOBILE APPLICATION:
+
+Steps:
+1. Run "python app.py"
+2. Enter the same IP obtained in the output on your web browser or any other laptop to run it locally on your device
+
 --------------------------------------------------------------------------------
 NOTES & SUPPORT
 ---------------
@@ -82,6 +88,9 @@ NOTES & SUPPORT
   - Logs: logs/ folder contains daily rotating app logs.
   - Performance: All AI processing is local; high RAM is recommended for 
     Ollama Vision features.
+
+
+
 
 ================================================================================
                        Developed for the Indian Market Context
