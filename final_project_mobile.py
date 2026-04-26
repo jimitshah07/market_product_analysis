@@ -56,7 +56,7 @@ except Exception:
     pass
 
 load_dotenv()
-SERPAPI_KEY  = os.getenv("SERPAPI_KEY", "7fd9b6a3d93cb68813e8af8a95f4aa4543cebd2cbeb1d12ac466651c3bedf292")
+SERPAPI_KEY  = os.getenv("SERPAPI_KEY", "")  # Set this in your .env file — never hardcode!
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b")
 OLLAMA_URL   = os.getenv("OLLAMA_URL",   "http://localhost:11434")
 
