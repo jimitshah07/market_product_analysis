@@ -21,7 +21,9 @@ This folder contains the **Ultimate Edition** of the Market Research Pro applica
    - Ensure `ollama serve` is running.
 
 3. **Configure API**:
-   - Create a `.env` file in this directory and add your `SERPAPI_KEY`.
+   - Create a `.env` file in this directory.
+   - Add your `SERPAPI_KEY` (get one at [serpapi.com](https://serpapi.com)).
+   - See `README_ULTIMATE.md` for exact `.env` format.
 
 4. **Launch**:
    ```bash
