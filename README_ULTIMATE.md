@@ -62,34 +62,59 @@ EXTERNAL AI SETUP (Ollama)
 3. Start:         ollama serve
 
 --------------------------------------------------------------------------------
-CONFIGURATION (.env)
----------------------
-Create a .env file:
-    SERPAPI_KEY=your_key_here
-    OLLAMA_MODEL=qwen2.5:1.5b
-    OLLAMA_VISION_MODEL=qwen2.5-vl
-    OLLAMA_URL=http://localhost:11434
+⚠️  API KEY SETUP (REQUIRED — READ CAREFULLY)
+---------------------------------------------
+This project uses SerpAPI to fetch data from Google Maps, Amazon, and Google
+Trends. The API key is NOT included in this repository for security reasons.
+
+Every user must obtain and configure their OWN API key. Here's how:
+
+STEP 1 — Get a free SerpAPI key:
+  → Go to: https://serpapi.com
+  → Sign up for a free account (100 free searches/month included)
+  → Copy your API key from the dashboard
+
+STEP 2 — Create a .env file in the project root folder:
+  (The project root is the same folder that contains final_project.py)
+
+  Create a file named exactly:  .env
+  Add these lines inside it:
+
+      SERPAPI_KEY=paste_your_key_here
+      OLLAMA_MODEL=qwen2.5:1.5b
+      OLLAMA_URL=http://localhost:11434
+
+  A template file called .env.example is included — you can copy/rename it.
+
+STEP 3 — Never share your .env file:
+  → The .env file is blocked by .gitignore and will NEVER be uploaded to GitHub
+  → Do not send it to anyone or commit it to any repository
+  → Each person running this project needs their own key
+
+WHY THE KEY IS NOT IN THE CODE:
+  The source code previously had the API key hardcoded as a fallback value.
+  This was a security risk — anyone who downloaded the project could see and
+  use the key, exhausting its free quota. The key has now been removed from
+  all source files. The app reads it ONLY from your local .env file.
 
 --------------------------------------------------------------------------------
 HOW TO RUN
 ----------
   python final_project.py
 
-FOR MOBILE APPLICATION:
-
-Steps:
-1. Run "python app.py"
-2. Enter the same IP obtained in the output on your web browser or any other laptop to run it locally on your device
+FOR MOBILE/WEB (Flask server):
+  1. Run "python app.py"
+  2. Open the IP address shown in the terminal on your phone or another device
 
 --------------------------------------------------------------------------------
 NOTES & SUPPORT
 ---------------
-  - Database: market_research.db (Auto-created, stores history & cache).
-  - Logs: logs/ folder contains daily rotating app logs.
-  - Performance: All AI processing is local; high RAM is recommended for 
-    Ollama Vision features.
-
-
+  - Database: market_research.db (Auto-created, stores history & cache)
+  - Logs: logs/ folder contains daily rotating app logs
+  - Performance: All AI processing is local; high RAM recommended for 
+    Ollama Vision features
+  - If SerpAPI key is missing or empty, data fetching will fail with an error —
+    this is expected and means you need to add your key to the .env file
 
 
 ================================================================================
